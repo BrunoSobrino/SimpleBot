@@ -1,0 +1,21 @@
+{
+  "name": "SimpleBot",
+  "description": "Subscribete a The Shadow Borkers (≧▽≦)",
+  "repository": "https://github.com/BrunoSobrino/SimpleBot",
+  "logo": "https://raw.githubusercontent.com/BrunoSobrino/SimpleBot/master/Menu2.jpg",
+  "keywords": ["java", "bot", "whatsapp-bot", "whatsapp-automation"],
+  "buildpacks": [
+  {
+    "url": "heroku/nodejs"
+  },
+  {
+    "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+  },
+  {
+    "url": "https://github.com/DuckyTeam/heroku-buildpack-imagemagick.git"
+  },
+  {
+    "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+  }    
+ ]
+}
