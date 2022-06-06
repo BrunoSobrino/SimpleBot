@@ -24,12 +24,11 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 > cd
 > termux-setup-storage
 > apt update 
-> pkg upgrade 
-> pkg install git -y
-> pkg install nodejs -y
-> pkg install ffmpeg -y
-> pkg install imagemagick -y
-> pkg install yarn
+> apt upgrade 
+> apt install git -y
+> apt install nodejs -y
+> apt install ffmpeg -y
+> apt install imagemagick -y
 > git clone https://github.com/BrunoSobrino/SimpleBot
 > cd SimpleBot
 > npm install
