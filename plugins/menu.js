@@ -31,6 +31,7 @@ let menu = `
 ┣ ඬ⃟💫 _${usedPrefix}sticker *link / url*_
 ┣ ඬ⃟💫 _${usedPrefix}tts *lenguaje texto*_
 ┣ ඬ⃟💫 _${usedPrefix}attp *texto*_
+┣ ඬ⃟💫 _${usedPrefix}imagen *texto*_
 ┣ ඬ⃟💫 _${usedPrefix}ytmp3 *link / url*_
 ┣ ඬ⃟💫 _${usedPrefix}ytmp4 *link / url*_
 ┣ ඬ⃟💫 _${usedPrefix}toimg *responde a un sticker*_
