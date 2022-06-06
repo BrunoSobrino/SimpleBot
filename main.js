@@ -25,14 +25,14 @@ try {
 const { Low, JSONFile } = low
 const mongoDB = require('./lib/mongoDB')
 
-
 global.API = (name, path = '/', query = {}, apikeyqueryname) => (name in global.APIs ? global.APIs[name] : name) + path + (query || apikeyqueryname ? '?' + new URLSearchParams(Object.entries({ ...query, ...(apikeyqueryname ? { [apikeyqueryname]: global.APIKeys[name in global.APIs ? global.APIs[name] : name] } : {}) })) : '')
 // global.Fn = function functionCallBack(fn, ...args) { return fn.call(global.conn, ...args) }
 global.timestamp = {
   start: new Date
 }
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || process.env.SERVER_PORT || 3000
+//const PORT = process.env.PORT || 3000
 
 global.opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse())
 // console.log({ opts })
