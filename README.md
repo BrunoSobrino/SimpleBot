@@ -32,6 +32,7 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 > pkg install yarn
 > git clone https://github.com/BrunoSobrino/SimpleBot
 > cd SimpleBot
+> npm install
 > npm update
 > npm start
 ```
