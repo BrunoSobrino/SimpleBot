@@ -61,7 +61,7 @@ hydratedTemplate: {
 hydratedContentText: menu,
 locationMessage: { 
 jpegThumbnail: fs.readFileSync('./Menu2.jpg') },
-hydratedFooterText: 'SIMPLE - BOT',
+hydratedFooterText: '©𝑆𝑖𝑚𝑝𝑙𝑒𝐵𝑜𝑡',
 hydratedButtons: [{
 urlButton: {
 displayText: 'GITHUB',
