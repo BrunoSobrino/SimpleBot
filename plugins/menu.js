@@ -64,12 +64,12 @@ jpegThumbnail: fs.readFileSync('./Menu2.jpg') },
 hydratedFooterText: '©𝑆𝑖𝑚𝑝𝑙𝑒𝐵𝑜𝑡',
 hydratedButtons: [{
 urlButton: {
-displayText: 'ＧＩＴＨＵＢ',
+displayText: '𝙶𝙸𝚃𝙷𝚄𝙱',
 url: 'https://github.com/BrunoSobrino'
 }},
 {
 urlButton: {
-displayText: 'ＣＲＥＡＤＯＲ',
+displayText: '𝙲𝚁𝙴𝙰𝙳𝙾𝚁',
 url: 'https://wa.me/5219992095479'    
 }},
 {
