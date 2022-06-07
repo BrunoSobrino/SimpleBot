@@ -8,8 +8,8 @@ let { dl_link, thumb, title, filesize, filesizeF } = await ytv(args[0], servers.
 let _thumb = {}
 try { _thumb = { thumbnail: await (await fetch(thumb)).buffer() } } catch (e) {}
 conn.sendFile(m.chat, dl_link, title + '.mp4', `
-*Title:* ${title}
-*Filesize:* ${filesizeF}
+*📌 𝚃𝙸𝚃𝚄𝙻𝙾:* ${title}
+*📁 𝙿𝙴𝚂𝙾:* ${filesizeF}
 `.trim(), m, false, {
 ..._thumb,
 asDocument: chat.useDocument
