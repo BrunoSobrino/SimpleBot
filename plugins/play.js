@@ -17,9 +17,9 @@ conn.sendFile(m.chat, thumb, 'error.jpg', `
 *📥 𝙳𝙴𝚂𝙲𝙰𝚁𝙶𝙰𝚁:* ${dl_link}
 `.trim(), m, false, { 
 contextInfo: { externalAdReply: {
-title: 'ᴄᴏᴍᴜɴɪᴄᴀᴅᴏ ᴏғɪᴄɪᴀʟ ᴀ ɢʀᴜᴘᴏs',
-body: 'ʙʏ ᴛʜᴇ ᴍʏsᴛɪᴄ ﹣ ʙᴏᴛ', 
-sourceUrl: `https://github.com/BrunoSobrino/TheMystic-Bot-MD`, 
+title: 'ʀᴇᴘʀᴏᴅᴜᴄᴛᴏʀ ᴅᴇ ʏᴏᴜᴛᴜʙᴇ',
+body: '©𝑆𝑖𝑚𝑝𝑙𝑒𝐵𝑜𝑡', 
+sourceUrl: `https://github.com/BrunoSobrino/SimpleBot`, 
 thumbnail: fs.readFileSync('./Menu2.jpg') }}})
 conn.sendFile(m.chat, dl_link, title + '.mp' + (3 + /2$/.test(command)), `
 *📌 𝚃𝙸𝚃𝚄𝙻𝙾:* ${title}
