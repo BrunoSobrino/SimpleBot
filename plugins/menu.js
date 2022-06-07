@@ -40,6 +40,9 @@ let menu = `
 ┣ ඬ⃟💫 _${usedPrefix}tts *[lenguaje] [texto]*_
 ┣ ඬ⃟💫 _${usedPrefix}toimg *[sticker]*_
 ┣ ඬ⃟💫 _${usedPrefix}sticker *[imagen]*_
+┣ ඬ⃟💫 _${usedPrefix}tourl *[imagen]*_
+┣ ඬ⃟💫 _${usedPrefix}tourl *[video]*_
+┣ ඬ⃟💫 _${usedPrefix}tourl *[audio]*_
 ┣ ඬ⃟💫 _${usedPrefix}fat *[nota de voz]*_
 ┣ ඬ⃟💫 _${usedPrefix}bass *[nota de voz]*_
 ┣ ඬ⃟💫 _${usedPrefix}blown *[nota de voz]*_
