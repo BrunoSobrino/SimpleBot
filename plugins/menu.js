@@ -37,21 +37,21 @@ let menu = `
 ┣ ඬ⃟💫 _${usedPrefix}ytmp3 *[url]*_
 ┣ ඬ⃟💫 _${usedPrefix}ytmp4 *[url]*_
 ┣ ඬ⃟💫 _${usedPrefix}tts *[lenguaje] [texto]*_
-┣ ඬ⃟💫 _${usedPrefix}toimg *[responder a sticker]*_
-┣ ඬ⃟💫 _${usedPrefix}sticker *[responder a imagen]*_
-┣ ඬ⃟💫 _${usedPrefix}fat *[responder a nv]*_
-┣ ඬ⃟💫 _${usedPrefix}bass *[responder a nv]*_
-┣ ඬ⃟💫 _${usedPrefix}blown *[responder a nv]*_
-┣ ඬ⃟💫 _${usedPrefix}deep *[responder a nv]*_
-┣ ඬ⃟💫 _${usedPrefix}fast *[responder a nv]*_
-┣ ඬ⃟💫 _${usedPrefix}robot *[responder a nv]*_
-┣ ඬ⃟💫 _${usedPrefix}slow *[responder a nv]*_
-┣ ඬ⃟💫 _${usedPrefix}tupai *[responder a nv]*_
-┣ ඬ⃟💫 _${usedPrefix}vibra *[responder a nv]*_
-┣ ඬ⃟💫 _${usedPrefix}nightcore *[responder a nv]*_
-┣ ඬ⃟💫 _${usedPrefix}earrape *[responder a nv]*_
-┣ ඬ⃟💫 _${usedPrefix}reverse *[responder a nv]*_
-┣ ඬ⃟💫 _${usedPrefix}smooth *[responder a nv]*_
+┣ ඬ⃟💫 _${usedPrefix}toimg *[sticker]*_
+┣ ඬ⃟💫 _${usedPrefix}sticker *[imagen]*_
+┣ ඬ⃟💫 _${usedPrefix}fat *[nota de voz]*_
+┣ ඬ⃟💫 _${usedPrefix}bass *[nota de voz]*_
+┣ ඬ⃟💫 _${usedPrefix}blown *[nota de voz]*_
+┣ ඬ⃟💫 _${usedPrefix}deep *[nota de voz]*_
+┣ ඬ⃟💫 _${usedPrefix}fast *[nota de voz]*_
+┣ ඬ⃟💫 _${usedPrefix}robot *[nota de voz]*_
+┣ ඬ⃟💫 _${usedPrefix}slow *[nota de voz]*_
+┣ ඬ⃟💫 _${usedPrefix}tupai *[nota de voz]*_
+┣ ඬ⃟💫 _${usedPrefix}vibra *[nota de voz]*_
+┣ ඬ⃟💫 _${usedPrefix}nightcore *[nota de voz]*_
+┣ ඬ⃟💫 _${usedPrefix}earrape *[nota de voz]*_
+┣ ඬ⃟💫 _${usedPrefix}reverse *[nota de voz]*_
+┣ ඬ⃟💫 _${usedPrefix}smooth *[nota de voz]*_
 ┗━━━━━━━━━━━━━┛
 `.trim()
 let mentionedJid = [who]
