@@ -65,7 +65,7 @@ hydratedFooterText: '©𝑆𝑖𝑚𝑝𝑙𝑒𝐵𝑜𝑡',
 hydratedButtons: [{
 urlButton: {
 displayText: '𝙶𝙸𝚃𝙷𝚄𝙱',
-url: 'https://github.com/BrunoSobrino'
+url: 'https://github.com/BrunoSobrino/SimpleBot'
 }},
 {
 urlButton: {
