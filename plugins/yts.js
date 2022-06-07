@@ -8,7 +8,6 @@ case 'video': return `
 📌 *${v.title}* (${v.url})
 ⌚ 𝙳𝚞𝚛𝚊𝚌𝚒𝚘𝚗: ${v.timestamp}
 ⏲️ 𝙿𝚞𝚋𝚕𝚒𝚌𝚊𝚍𝚘 ${v.ago}
-👁️ ${v.view} 𝚟𝚒𝚜𝚝𝚊𝚜
 `.trim()
 case 'channel': return `
 📌 *${v.name}* (${v.url})
