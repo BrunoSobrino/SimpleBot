@@ -6,7 +6,7 @@ let espera = '*[❗𝐈𝐍𝐅𝐎❗] 𝙰𝙶𝚄𝙰𝚁𝙳𝙴 𝚄𝙽 �
 m.reply(espera)
 let res = await fetch("https://api.dhamzxploit.my.id/api/tiktod/?url="+args[0])
 let json = await res.json()
-conn.sendFile(m.chat, json.result.nowatermark, 'error.mp4', `_𝐓𝐡𝐞 𝐌𝐲𝐬𝐭𝐢𝐜 - 𝐁𝐨𝐭_`, m)}
+conn.sendFile(m.chat, json.result.nowatermark, 'error.mp4', `*©𝑆𝑖𝑚𝑝𝑙𝑒𝐵𝑜𝑡*`, m)}
 }
 handler.help = ['tiktok'].map(v => v + ' <url>')
 handler.tags = ['general']
