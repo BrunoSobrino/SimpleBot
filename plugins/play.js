@@ -1,6 +1,7 @@
 let { MessageType } = require('@adiwajshing/baileys')
 let yts = require('yt-search')
 let fs = require('fs')
+let fetch = require('node-fetch')
 const { servers, yta, ytv } = require('../lib/y2mate')
 let handler = async(m, { conn, command, text, isPrems, isOwner, DevMode }) => {
 conn.play = conn.play ? conn.play : {}
@@ -10,11 +11,12 @@ let results = await yts(text)
 let vid = results.all.find(video => video.seconds < 3600)
 if (!vid) throw '*[❗𝐈𝐍𝐅𝐎❗] 𝙻𝙾 𝚂𝙸𝙴𝙽𝚃𝙾, 𝙽𝙾 𝙿𝚄𝙳𝙴 𝙴𝙽𝙲𝙾𝙽𝚃𝚁𝙰𝚁 𝙴𝙻 𝙰𝚄𝙳𝙸𝙾/𝚅𝙸𝙳𝙴𝙾, 𝙸𝙽𝚃𝙴𝙽𝚃𝙴 𝙲𝙾𝙽 𝙾𝚃𝚁𝙾 𝙽𝙾𝙼𝙱𝚁𝙴/𝚃𝙸𝚃𝚄𝙻𝙾*'
 let { dl_link, thumb, title, filesize, filesizeF } = await (/2$/.test(command) ? ytv : yta)(vid.url, 'id4')
+let shortUrl = await (await fetch(`https://tinyurl.com/api-create.php?url=${dl_link}`)).text()
 conn.sendFile(m.chat, thumb, 'error.jpg', `
 📌 *𝚃𝙸𝚃𝚄𝙻𝙾:* ${title}
 *📁 𝙿𝙴𝚂𝙾:* ${filesizeF}
 *🔗 𝚄𝚁𝙻:* ${vid.url}
-*📥 𝙳𝙴𝚂𝙲𝙰𝚁𝙶𝙰𝚁:* ${dl_link}
+*📥 𝙳𝙴𝚂𝙲𝙰𝚁𝙶𝙰𝚁:* ${shortUrl}
 `.trim(), m, false, { 
 contextInfo: { externalAdReply: {
 title: 'ʀᴇᴘʀᴏᴅᴜᴄᴛᴏʀ ᴅᴇ ʏᴏᴜᴛᴜʙᴇ',
@@ -27,7 +29,6 @@ conn.sendFile(m.chat, dl_link, title + '.mp' + (3 + /2$/.test(command)), `
 *🔗 𝚄𝚁𝙻:* ${vid.url}
 `.trim(), m)
 } catch (e) {
-console.log(e)
 m.reply('*[❗] 𝙴𝚁𝚁𝙾𝚁*')
 }}
 handler.help = ['play', 'play2'].map(v => v + ' <pencarian>')
