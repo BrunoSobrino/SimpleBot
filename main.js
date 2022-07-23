@@ -38,20 +38,20 @@ global.db = new Low(
 )
 global.DATABASE = global.db // Backwards Compatibility
 global.loadDatabase = async function loadDatabase() {
-if (global.db.READ) return new Promise((resolve) => setInterval(function () { (!global.db.READ ? (clearInterval(this), resolve(global.db.data == null ? global.loadDatabase() : global.db.data)) : null) }, 1 * 1000))
-if (global.db.data !== null) return
-global.db.READ = true
-await global.db.read()
-global.db.READ = false
-global.db.data = {
+  if (global.db.READ) return new Promise((resolve) => setInterval(function () { (!global.db.READ ? (clearInterval(this), resolve(global.db.data == null ? global.loadDatabase() : global.db.data)) : null) }, 1 * 1000))
+  if (global.db.data !== null) return
+  global.db.READ = true
+  await global.db.read()
+  global.db.READ = false
+  global.db.data = {
     users: {},
     chats: {},
     stats: {},
     msgs: {},
     sticker: {},
     ...(global.db.data || {})
-}
-global.db.chain = _.chain(global.db.data)
+  }
+  global.db.chain = _.chain(global.db.data)
 }
 loadDatabase()
 
@@ -66,8 +66,7 @@ const connectionOptions = {
   browser: ['SIMPLE-BOT','Safari','1.0.0']
 }
 
-global.conn = makeWASocket(connectionOptions)
-conn.isInit = false
+global.conn = simple.makeWASocket(connectionOptions)
 
 if (!opts['test']) {
   if (global.db) setInterval(async () => {
@@ -81,7 +80,8 @@ async function connectionUpdate(update) {
   if (isNewLogin) conn.isInit = true
   const code = lastDisconnect?.error?.output?.statusCode || lastDisconnect?.error?.output?.payload?.statusCode
   if (code && code !== DisconnectReason.loggedOut && conn?.ws.readyState !== CONNECTING) {
-    console.log(await global.reloadHandler(true).catch(console.error))
+    console.log(global.reloadHandler(true))
+    //console.log(await global.reloadHandler(true).catch(console.error))
     global.timestamp.connect = new Date
   }
   if (global.db.data == null) loadDatabase()
