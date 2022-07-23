@@ -1,43 +1,35 @@
 require('./config')
-const {
-  useSingleFileAuthState,
-  DisconnectReason
-} = require('@adiwajshing/baileys')
+const { useSingleFileAuthState, DisconnectReason, msgRetryCounterMap } = require('@adiwajshing/baileys')
 const WebSocket = require('ws')
 const ws = require('ws')
 const { CONNECTING } = ws
 const path = require('path')
+const { join } = require('path')
 const fs = require('fs')
 const yargs = require('yargs/yargs')
+const { readdirSync } = require('fs')
 const cp = require('child_process')
+const chalk = require('chalk')
 const _ = require('lodash')
 const { makeWASocket } = require('./lib/simple.js')
 const syntaxerror = require('syntax-error')
 const P = require('pino')
+const { tmpdir } = require('os')
 const os = require('os')
 let simple = require('./lib/simple')
 var low
-try {
-  low = require('lowdb')
+try { 
+low = require('lowdb')
 } catch (e) {
-  low = require('./lib/lowdb')
-}
+low = require('./lib/lowdb')}
 const { Low, JSONFile } = low
 const mongoDB = require('./lib/mongoDB')
-
 global.API = (name, path = '/', query = {}, apikeyqueryname) => (name in global.APIs ? global.APIs[name] : name) + path + (query || apikeyqueryname ? '?' + new URLSearchParams(Object.entries({ ...query, ...(apikeyqueryname ? { [apikeyqueryname]: global.APIKeys[name in global.APIs ? global.APIs[name] : name] } : {}) })) : '')
-// global.Fn = function functionCallBack(fn, ...args) { return fn.call(global.conn, ...args) }
 global.timestamp = {
-  start: new Date
-}
-
+start: new Date }
 const PORT = process.env.PORT || process.env.SERVER_PORT || 3000
-//const PORT = process.env.PORT || 3000
-
 global.opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse())
-// console.log({ opts })
-global.prefix = new RegExp('^[' + (opts['prefix'] || '‎xzXZ/i!#$%+£¢€¥^°=¶∆×÷π√✓©®:;?&.\\-').replace(/[|\\{}()[\]^$+*?.\-\^]/g, '\\$&') + ']')
-
+global.prefix = new RegExp('^[' + (opts['prefix'] || 'xzXZ/i!#$%+£¢€¥^°=¶∆×÷π√✓©®:;?&.\\-HhhHBb.aA').replace(/[|\\{}()[\]^$+*?.\-\^]/g, '\\$&') + ']')
 global.db = new Low(
   /https?:\/\//.test(opts['db'] || '') ?
     new cloudDBAdapter(opts['db']) : /mongodb/.test(opts['db']) ?
@@ -46,34 +38,32 @@ global.db = new Low(
 )
 global.DATABASE = global.db // Backwards Compatibility
 global.loadDatabase = async function loadDatabase() {
-  if (global.db.READ) return new Promise((resolve) => setInterval(function () { (!global.db.READ ? (clearInterval(this), resolve(global.db.data == null ? global.loadDatabase() : global.db.data)) : null) }, 1 * 1000))
-  if (global.db.data !== null) return
-  global.db.READ = true
-  await global.db.read()
-  global.db.READ = false
-  global.db.data = {
+if (global.db.READ) return new Promise((resolve) => setInterval(function () { (!global.db.READ ? (clearInterval(this), resolve(global.db.data == null ? global.loadDatabase() : global.db.data)) : null) }, 1 * 1000))
+if (global.db.data !== null) return
+global.db.READ = true
+await global.db.read()
+global.db.READ = false
+global.db.data = {
     users: {},
     chats: {},
     stats: {},
     msgs: {},
     sticker: {},
     ...(global.db.data || {})
-  }
-  global.db.chain = _.chain(global.db.data)
+}
+global.db.chain = _.chain(global.db.data)
 }
 loadDatabase()
 
-// if (opts['cluster']) {
-//   require('./lib/cluster').Cluster()
-// }
 global.authFile = `${opts._[0] || 'session'}.data.json`
 const { state, saveState } = useSingleFileAuthState(global.authFile)
 
 const connectionOptions = {
   printQRInTerminal: true,
   auth: state,
-  browser: ['SIMPLE-BOT','Chrome','1.0.0'],
-  // logger: pino({ level: 'trace' })
+  logger: P({ level: 'silent'}),
+  downloadHistory: false,
+  browser: ['SIMPLE-BOT','Safari','1.0.0']
 }
 
 global.conn = makeWASocket(connectionOptions)
@@ -82,9 +72,8 @@ conn.isInit = false
 if (!opts['test']) {
   if (global.db) setInterval(async () => {
     if (global.db.data) await global.db.write()
-    if (opts['autocleartmp'] && (global.support || {}).find) (tmp = [os.tmpdir(), 'tmp'], tmp.forEach(filename => cp.spawn('find', [filename, '-amin', '3', '-type', 'f', '-delete'])))
-  }, 30 * 1000)
-}
+if (opts['autocleartmp'] && (global.support || {}).find) (tmp = [os.tmpdir(), 'tmp'], tmp.forEach(filename => cp.spawn('find', [filename, '-amin', '3', '-type', 'f', '-delete'])))
+}, 30 * 1000)}
 if (opts['server']) require('./server')(global.conn, PORT)
 
 async function connectionUpdate(update) {
@@ -96,8 +85,8 @@ async function connectionUpdate(update) {
     global.timestamp.connect = new Date
   }
   if (global.db.data == null) loadDatabase()
+  if (connection == 'open') {console.log(chalk.yellow('▣─────────────────────────────···\n│\n│❧ 𝙲𝙾𝙽𝙴𝙲𝚃𝙰𝙳𝙾 𝙲𝙾𝚁𝚁𝙴𝙲𝚃𝙰𝙼𝙴𝙽𝚃𝙴 𝙰𝙻 𝚆𝙷𝙰𝚃𝚂𝙰𝙿𝙿 ✅\n│\n▣─────────────────────────────···'))}
 }
-
 
 process.on('uncaughtException', console.error)
 // let strQuot = /(["'])(?:(?=(\\?))\2.)*?\1/
@@ -112,6 +101,18 @@ const imports = (path) => {
   } while ((!modules || (Array.isArray(modules) || modules instanceof String) ? !(modules || []).length : typeof modules == 'object' && !Buffer.isBuffer(modules) ? !(Object.keys(modules || {})).length : true) && retry <= 10)
   return modules
 }
+
+function clearTmp() {
+const tmp = [tmpdir(), join(__dirname, './tmp')]
+const filename = []
+tmp.forEach(dirname => readdirSync(dirname).forEach(file => filename.push(join(dirname, file))))
+return filename.map(file => {
+const stats = statSync(file)
+if (stats.isFile() && (Date.now() - stats.mtimeMs >= 1000 * 60 * 3)) return unlinkSync(file) // 3 minutes
+return false
+})}
+
+
 let isInit = true
 global.reloadHandler = function (restatConn) {
   let handler = imports('./handler')
@@ -219,11 +220,14 @@ async function _quickTest() {
   // require('./lib/sticker').support = s
   Object.freeze(global.support)
 
-  if (!s.ffmpeg) conn.logger.warn('Please install ffmpeg for sending videos (pkg install ffmpeg)')
+  /*if (!s.ffmpeg) conn.logger.warn('Please install ffmpeg for sending videos (pkg install ffmpeg)')
   if (s.ffmpeg && !s.ffmpegWebp) conn.logger.warn('Stickers may not animated without libwebp on ffmpeg (--enable-ibwebp while compiling ffmpeg)')
-  if (!s.convert && !s.magick && !s.gm) conn.logger.warn('Stickers may not work without imagemagick if libwebp on ffmpeg doesnt isntalled (pkg install imagemagick)')
+  if (!s.convert && !s.magick && !s.gm) conn.logger.warn('Stickers may not work without imagemagick if libwebp on ffmpeg doesnt isntalled (pkg install imagemagick)')*/
 }
-
+setInterval(async () => {
+var a = await clearTmp()
+console.log(chalk.cyanBright(`\n▣────────[ 𝙰𝚄𝚃𝙾𝙲𝙻𝙴𝙰𝚁𝚃𝙼𝙿 ]───────────···\n│\n▣─❧ 𝙰𝚁𝙲𝙷𝙸𝚅𝙾𝚂 𝙴𝙻𝙸𝙼𝙸𝙽𝙰𝙳𝙾𝚂 ✅\n│\n▣────────────────────────────────────···\n`))
+}, 180000)
 _quickTest()
-  .then(() => conn.logger.info('Quick Test Done'))
-  .catch(console.error)
+.then(() => conn.logger.info('Test Rapido Realizado'))
+.catch(console.error)
