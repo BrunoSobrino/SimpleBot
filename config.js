@@ -1,6 +1,6 @@
 global.DeveloperMode = 'false' 
 global.linkGC = []
-global.owner = ['5219996125657']
+global.owner = ['53 51419198']
 global.mods = [] 
 global.prems = [] 
 global.APIs = { 
@@ -21,7 +21,7 @@ global.APIKeys = {
   'https://pencarikode.xyz': 'pais'
 }
 
-global.packname = 'wa.me/6285713964963'
+global.packname = 'wa.me/+5151419198'
 global.author = 'Metro Bot Is The Best'
 global.multiplier = 9999 
 
