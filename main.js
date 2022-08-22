@@ -157,7 +157,7 @@ for (let filename of fs.readdirSync(pluginFolder).filter(pluginFilter)) {
     delete global.plugins[filename]
   }
 }
-console.log(Object.keys(global.plugins))
+//console.log(Object.keys(global.plugins))
 global.reload = (_ev, filename) => {
   if (pluginFilter(filename)) {
     let dir = path.join(pluginFolder, filename)
@@ -207,7 +207,7 @@ async function _quickTest() {
     ])
   }))
   let [ffmpeg, ffprobe, ffmpegWebp, convert, magick, gm, find] = test
-  console.log(test)
+  //console.log(test)
   let s = global.support = {
     ffmpeg,
     ffprobe,
@@ -229,5 +229,5 @@ var a = await clearTmp()
 console.log(chalk.cyanBright(`\n▣────────[ 𝙰𝚄𝚃𝙾𝙲𝙻𝙴𝙰𝚁𝚃𝙼𝙿 ]───────────···\n│\n▣─❧ 𝙰𝚁𝙲𝙷𝙸𝚅𝙾𝚂 𝙴𝙻𝙸𝙼𝙸𝙽𝙰𝙳𝙾𝚂 ✅\n│\n▣────────────────────────────────────···\n`))
 }, 180000)
 _quickTest()
-.then(() => conn.logger.info('Test Rapido Realizado'))
+.then(() => conn.logger.info('Ƈᴀʀɢᴀɴᴅᴏ．．．\n'))
 .catch(console.error)
