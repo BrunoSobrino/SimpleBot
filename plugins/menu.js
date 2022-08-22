@@ -31,6 +31,13 @@ let menu = `
 ┣ ඬ⃟💫 _${usedPrefix}tiktok *[url]*_
 ┣ ඬ⃟💫 _${usedPrefix}sticker *[url]*_
 ┣ ඬ⃟💫 _${usedPrefix}attp *[texto]*_
+┣ ඬ⃟💫 _${usedPrefix}attp2 *[texto]*_
+┣ ඬ⃟💫 _${usedPrefix}attp3 *[texto]*_
+┣ ඬ⃟💫 _${usedPrefix}ttp *[texto]*_
+┣ ඬ⃟💫 _${usedPrefix}ttp2 *[texto]*_
+┣ ඬ⃟💫 _${usedPrefix}ttp3 *[texto]*_
+┣ ඬ⃟💫 _${usedPrefix}ttp4 *[texto]*_
+┣ ඬ⃟💫 _${usedPrefix}ttp5 *[texto]*_
 ┣ ඬ⃟💫 _${usedPrefix}google *[texto]*_
 ┣ ඬ⃟💫 _${usedPrefix}imagen *[texto]*_
 ┣ ඬ⃟💫 _${usedPrefix}play *[texto]*_
