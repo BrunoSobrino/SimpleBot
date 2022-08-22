@@ -4,33 +4,27 @@ global.owner = ['5219996125657']
 global.mods = [] 
 global.prems = [] 
 global.APIs = { 
-  nrtm: 'https://nurutomo.herokuapp.com',
-  xteam: 'https://api.xteam.xyz',
-  nzcha: 'http://nzcha-apii.herokuapp.com',
-  bg: 'http://bochil.ddns.net',
-  fdci: 'https://api.fdci.se',
-  dzx: 'https://api.dhamzxploit.my.id',
-  zahir: 'https://zahirr-web.herokuapp.com',
-  zeks: 'https://api.zeks.xyz',
-  pencarikode: 'https://pencarikode.xyz'
-}
+nrtm: 'https://nurutomo.herokuapp.com',
+xteam: 'https://api.xteam.xyz',
+nzcha: 'http://nzcha-apii.herokuapp.com',
+dzx: 'https://api.dhamzxploit.my.id',
+zahir: 'https://zahirr-web.herokuapp.com' }
 global.APIKeys = { 
-  'https://api.xteam.xyz': 'd90a9e986e18778b',
-  'https://zahirr-web.herokuapp.com': 'zahirgans',
-  'https://api.zeks.xyz': 'apivinz',
-  'https://pencarikode.xyz': 'pais'
-}
-
-global.packname = 'wa.me/6285713964963'
-global.author = 'Metro Bot Is The Best'
+'https://api.xteam.xyz': 'd90a9e986e18778b',
+'https://zahirr-web.herokuapp.com': 'zahirgans' }
+global.packname = '(☞ﾟ∀ﾟ)☞'
+global.author = '𝕊𝕚𝕞𝕡𝕝𝕖𝔹𝕠𝕥'
+global.wm = '𝕊𝕚𝕞𝕡𝕝𝕖𝔹𝕠𝕥'
+global.wait = '*[❗] Ƈᴀʀɢᴀɴᴅᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ...*'
+global.lolkeysapi = ['85faf717d0545d14074659ad']
+global.keysZens = ['fiktod', 'c2459db922', 'BF39D349845E', '675e34de8a', '37CC845916', '0b917b905e6f', '6fb0eff124']
+global.keysxxx = keysZens[Math.floor(keysZens.length * Math.random())]
 global.multiplier = 9999 
-
 let fs = require('fs')
 let chalk = require('chalk')
 let file = require.resolve(__filename)
 fs.watchFile(file, () => {
 fs.unwatchFile(file)
-console.log(chalk.redBright("Update 'config.js'"))
+console.log(chalk.redBright("Se actualizo el archivo 'config.js'"))
 delete require.cache[file]
-require(file)
-})
+require(file)})
