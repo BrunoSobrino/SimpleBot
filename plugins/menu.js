@@ -13,11 +13,12 @@ try {
 } finally {
 let { name, limit, exp, banned, lastclaim, registered, regTime, age, level } = global.db.data.users[m.sender]
 let { min, xp, max } = levelling.xpRange(level, global.multiplier)
+let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 let username = conn.getName(who)
 let menu = `
 ╭══〘 ✯✯✯✯✯✯✯✯ 〙═╮
 ║≡≡≡≡≡≡≡≡≡≡≡≡≡≡
-║➤ *✨𝗛ola, ${username}!!*
+║➤ *✨𝗛ola, ${taguser} :D*
 ║≡≡≡≡≡≡≡≡≡≡≡≡≡≡
 ╰══╡✯✯✯✯✯✯✯✯╞══╯
 ┏━━━━━━━━━━━━━┓
@@ -71,45 +72,29 @@ let menu = `
 ┣ ඬ⃟💫 _${usedPrefix}update_
 ┗━━━━━━━━━━━━━┛
 `.trim()
-let mentionedJid = [who]
-const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
-templateMessage: {
-hydratedTemplate: {
-hydratedContentText: menu,
-locationMessage: { 
-jpegThumbnail: fs.readFileSync('./Menu2.jpg') },
-hydratedFooterText: '©𝑆𝑖𝑚𝑝𝑙𝑒𝐵𝑜𝑡',
-hydratedButtons: [{
-urlButton: {
-displayText: '𝙶𝙸𝚃𝙷𝚄𝙱',
-url: 'https://github.com/BrunoSobrino/SimpleBot'
-}},
-{
-urlButton: {
-displayText: '𝙲𝚁𝙴𝙰𝙳𝙾𝚁',
-url: 'https://wa.me/5219992095479'    
-}},
-{
-quickReplyButton: {
-displayText: null,
-id: null,
-}},
-{
-quickReplyButton: {
-displayText: null,
-id: null,
-}},
-{
-quickReplyButton: {
-displayText: null,
-id: null,
-}}]}}
-}), { userJid: m.sender, quoted: m });
-return await conn.relayMessage(
-m.chat,
-template.message,
-{ messageId: template.key.id })    
-    
+//let mentionedJid = [who]
+let buttons = [
+{ buttonId: '#owner', buttonText: { displayText: '𝐎𝐖𝐍𝐄𝐑' }, type: 1 },
+{ buttonId: '#runtime', buttonText: { displayText: '𝐑𝐔𝐍𝐓𝐈𝐌𝐄' }, type: 1 }]
+let buttonMessage = {
+image: fs.readFileSync('./Menu2.jpg'),
+caption: menu.trim(),
+mentions: [m.sender],
+footer: `*${wm}*`,
+buttons: buttons,
+headerType: 4,
+contextInfo: {
+mentionedJid: [m.sender],
+externalAdReply: {
+showAdAttribution: true,
+mediaType: 'VIDEO',
+mediaUrl: null,
+title: '👑 𝐀𝐜𝐢𝐝𝐢𝐜𝐍𝐨𝐝𝐞𝐬 𝐇𝐨𝐬𝐭 👑',
+body: null,
+thumbnail: fs.readFileSync('./src/logo.png'),
+sourceUrl: `https://chat.whatsapp.com/F0fU7LSlBBcBm6ny5fVSuT`
+}}}
+conn.sendMessage(m.chat, buttonMessage, { quoted: m })
 }}
 handler.help = ['menu', 'help', '?']
 handler.tags = ['general']
