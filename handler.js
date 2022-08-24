@@ -51,6 +51,7 @@ module.exports = {
                     if (!isNumber(user.batu)) user.batu = 0
                     if (!isNumber(user.string)) user.string = 0
                     if (!isNumber(user.petFood)) user.petFood = 0
+                    if (!isNumber(user.makananpet)) user.makananpet = 0
 
                     if (!isNumber(user.emerald)) user.emerald = 0
                     if (!isNumber(user.diamond)) user.diamond = 0
@@ -95,6 +96,8 @@ module.exports = {
                     if (!isNumber(user.lasthunt)) user.lasthunt = 0
                     if (!isNumber(user.lastweekly)) user.lastweekly = 0
                     if (!isNumber(user.lastmonthly)) user.lastmonthly = 0
+                    
+                    if (!isNumber(user.warning)) user.warning = 0
                 } else global.db.data.users[m.sender] = {
                     exp: 0,
                     limit: 10,
@@ -163,6 +166,7 @@ module.exports = {
                     lasthunt: 0,
                     lastweekly: 0,
                     lastmonthly: 0,
+                    warning: 0,
                 }
                 let chat = global.db.data.chats[m.chat]
                 if (typeof chat !== 'object') global.db.data.chats[m.chat] = {}
@@ -176,6 +180,7 @@ module.exports = {
                     if (!('sDemote' in chat)) chat.sDemote = ''
                     if (!('delete' in chat)) chat.delete = true
                     if (!('antiLink' in chat)) chat.antiLink = false
+                    if (!('simi' in chat)) chat.simi = false
                     if (!('viewonce' in chat)) chat.viewonce = false
                     if (!('antiToxic' in chat)) chat.antiToxic = false
                 } else global.db.data.chats[m.chat] = {
@@ -188,9 +193,36 @@ module.exports = {
                     sDemote: '',
                     delete: true,
                     antiLink: false,
+                    simi: false,
                     viewonce: false,
-                    antiToxic: true,
+                    antiToxic: false,
                 }
+                
+        let settings = global.db.data.settings
+        if (typeof settings !== 'object') global.db.data.settings = {}
+        if (settings) {
+          if (!'anon' in settings) settings.anon = true
+          if (!'anticall' in settings) settings.anticall = true
+          if (!'antispam' in settings) settings.antispam = true
+          if (!'antitroli' in settings) settings.antitroli = true
+          if (!'backup' in settings) settings.backup = false
+          if (!isNumber(settings.backupDB)) settings.backupDB = 0
+          if (!'groupOnly' in settings) settings.groupOnly = false
+          if (!'jadibot' in settings) settings.groupOnly = false
+          if (!'nsfw' in settings) settings.nsfw = true
+          if (!isNumber(settings.status)) settings.status = 0
+        } else global.db.data.settings = {
+          anon: true,
+          anticall: true,
+          antispam: false,
+          antitroli: false,
+          backup: false,
+          backupDB: 0,
+          groupOnly: false,
+          jadibot: false,
+          nsfw: false,
+          status: 0,
+        }                
             } catch (e) {
                 console.error(e)
             }
@@ -231,8 +263,8 @@ module.exports = {
             let participants = (m.isGroup ? groupMetadata.participants : []) || []
             let user = (m.isGroup ? participants.find(u => conn.decodeJid(u.id) === m.sender) : {}) || {} // User Data
             let bot = (m.isGroup ? participants.find(u => conn.decodeJid(u.id) == this.user.jid) : {}) || {} // Your Data
-            let isAdmin = user.isAdmin || user.isSuperAdmin || false // Is User Admin?
-             let isBotAdmin = bot.isAdmin || bot.isSuperAdmin || false // Are you Admin?
+            let isAdmin = user && user.admin || false // Is User Admin?
+            let isBotAdmin = bot && bot.admin || false // Are you Admin?
             for (let name in global.plugins) {
                 let plugin = global.plugins[name]
                 if (!plugin) continue
@@ -408,7 +440,7 @@ module.exports = {
 
                 let stat
                 if (m.plugin) {
-                    let now = +new Date
+                    let now = + new Date
                     if (m.plugin in stats) {
                         stat = stats[m.plugin]
                         if (!isNumber(stat.total)) stat.total = 1
@@ -430,11 +462,6 @@ module.exports = {
                 }
             }
 
-            try {
-                 require('./lib/print')(m, this)
-             } catch (e) {
-                 console.log(m, m.quoted, e)
-            }
             if (opts['autoread']) await this.chatRead(m.chat, m.isGroup ? m.sender : undefined, m.id || m.key.id).catch(() => { })
             let quequeIndex = this.msgqueque.indexOf(m.id || m.key.id)
             if (opts['queque'] && m.text && quequeIndex !== -1) this.msgqueque.splice(quequeIndex, 1)
@@ -473,7 +500,7 @@ module.exports = {
             case 'demote':
                 if (!text) text = (chat.sDemote || this.sdemote || conn.sdemote || '@user ```is no longer Admin```')
                 text = text.replace('@user', '@' + participants[0].split('@')[0])
-                if (chat.detect) this.sendMessage(id, { text: text }, {
+                if (chat.detect) this.sendMessage(id, text, MessageType.extendedText, {
                     contextInfo: {
                         mentionedJid: this.parseMention(text)
                     }
@@ -504,7 +531,7 @@ let chalk = require('chalk')
 let file = require.resolve(__filename)
 fs.watchFile(file, () => {
     fs.unwatchFile(file)
-    console.log(chalk.redBright("Update 'handler.js'"))
+    console.log(chalk.redBright("Se actualizo el archivo 'handler.js'"))
     delete require.cache[file]
     if (global.reloadHandler) console.log(global.reloadHandler())
 })
