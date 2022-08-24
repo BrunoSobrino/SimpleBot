@@ -55,20 +55,6 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 > npm start
 ```
 
-### `—◉ 🔥 ACTIVAR EN BOXMINEHOST 🔥`
-<img src="https://raw.githubusercontent.com/BrunoSobrino/TheMystic-Bot-MD/master/src/Pre%20Bot%20Publi.png" alt="GIF" width="450" height="240"/>
-<p>> Pagina Oficial:
-<a href="https://boxmineworld.com">https://boxmineworld.com</a>
-<p>> Dashboard:
-<a href="https://dash.boxmineworld.com/home">https://dash.boxmineworld.com/home</a>
-<p>> Panel:
-<a href="https://panel.boxmineworld.com">https://panel.boxmineworld.com</a>
-<p>> Tutorial:
-<a href="https://youtu.be/eC9TfKICpcY">https://youtu.be/eC9TfKICpcY</a>
-<p>> Dudas UNICAMENTE SOBRE EL HOST:
-<a href="https://discord.gg/84qsr4v">https://discord.gg/84qsr4v</a> (Preguntar por Vicemi)
-</p>
-
 ## `EDITOR Y PORPIETARIO DEL BOT` 
 [![BrunoSobrino](https://avatars.githubusercontent.com/u/90165013?s=400&u=946f5c00c527c7e6fa2ef5148c6ad56270bb600e&v=4size=100)](https://github.com/BrunoSobrino/) 
 
