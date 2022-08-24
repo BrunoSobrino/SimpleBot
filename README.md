@@ -12,9 +12,9 @@
 - CAMBIAR NÚMERO DEL OWNER [Aqui](https://github.com/BrunoSobrino/SimpleBot/blob/master/config.js)
 
 ### `—◉ 💥 ACTIVAR EN ACIDICNODES 💥`
-<a href="https://billing.acidicnodes.ml/register?ref=ADII104p"><img src="https://billing.acidicnodes.ml/storage/icon.png" width="200" height="200" alt="acidicnodes"/></a>
+<a href="https://billing.acidicnodes.com"><img src="https://billing.acidicnodes.ml/storage/icon.png" width="200" height="200" alt="AcidicNodes"/></a>
 - TUTORIAL: [https://youtu.be/nbjvreJ0tUk](https://youtu.be/nbjvreJ0tUk)
-- PAGINA: [https://billing.acidicnodes.ml/register?ref=ADII104p](https://billing.acidicnodes.ml/register?ref=ADII104p)
+- PAGINA: [https://billing.acidicnodes.com](https://billing.acidicnodes.com)
 - SOPORTE: [https://whatsapp.acidicnodes.com](https://whatsapp.acidicnodes.com)
 
 ### `—◉ ✨ ACTIVAR EN HEROKU ✨`
