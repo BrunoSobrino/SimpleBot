@@ -28,6 +28,7 @@ let menu = `
 ┣ ඬ⃟💫 _${usedPrefix}dog_
 ┣ ඬ⃟💫 _${usedPrefix}logos_
 ┣ ඬ⃟💫 _${usedPrefix}runtime_
+┣ ඬ⃟💫 _${usedPrefix}mediafire *[url]*_
 ┣ ඬ⃟💫 _${usedPrefix}tiktok *[url]*_
 ┣ ඬ⃟💫 _${usedPrefix}sticker *[url]*_
 ┣ ඬ⃟💫 _${usedPrefix}attp *[texto]*_
