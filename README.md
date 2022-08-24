@@ -43,6 +43,7 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 > yarn install
 > npm install
 > npm update
+> npm install
 > npm start
 ```
 
@@ -64,6 +65,6 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 ```
 
 ## `EDITOR Y PORPIETARIO DEL BOT` 
-[![BrunoSobrino](https://avatars.githubusercontent.com/u/90165013?s=400&u=946f5c00c527c7e6fa2ef5148c6ad56270bb600e&v=4size=100)](https://github.com/BrunoSobrino/) 
+<a href="https://github.com/BrunoSobrino"><img src="https://github.com/BrunoSobrino.png" width="300" height="300" alt="BrunoSobrino"/></a>
 
-`Simple - Bot __________ By Bruno Sobrino`
+`TheMystic-Bot-MD _ By Bruno Sobrino`
