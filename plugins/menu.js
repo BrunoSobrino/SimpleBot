@@ -25,6 +25,7 @@ let menu = `
 ┃ *< COMANDOS >*
 ┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡
 ┣ ඬ⃟💫 _a_
+┣ ඬ⃟💫 _${usedPrefix}infohost_
 ┣ ඬ⃟💫 _${usedPrefix}cat_
 ┣ ඬ⃟💫 _${usedPrefix}dog_
 ┣ ඬ⃟💫 _${usedPrefix}logos_
