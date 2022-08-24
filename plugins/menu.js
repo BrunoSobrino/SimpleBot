@@ -29,6 +29,8 @@ let menu = `
 ┣ ඬ⃟💫 _${usedPrefix}dog_
 ┣ ඬ⃟💫 _${usedPrefix}logos_
 ┣ ඬ⃟💫 _${usedPrefix}runtime_
+┣ ඬ⃟💫 _${usedPrefix}on welcome_
+┣ ඬ⃟💫 _${usedPrefix}off welcome_
 ┣ ඬ⃟💫 _${usedPrefix}mediafire *[url]*_
 ┣ ඬ⃟💫 _${usedPrefix}tiktok *[url]*_
 ┣ ඬ⃟💫 _${usedPrefix}sticker *[url]*_
