@@ -25,11 +25,12 @@ let menu = `
 ┃ *< COMANDOS >*
 ┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡
 ┣ ඬ⃟💫 _a_
-┣ ඬ⃟💫 _${usedPrefix}infohost_
 ┣ ඬ⃟💫 _${usedPrefix}cat_
 ┣ ඬ⃟💫 _${usedPrefix}dog_
+┣ ඬ⃟💫 _${usedPrefix}meme_
 ┣ ඬ⃟💫 _${usedPrefix}logos_
 ┣ ඬ⃟💫 _${usedPrefix}runtime_
+┣ ඬ⃟💫 _${usedPrefix}infohost_
 ┣ ඬ⃟💫 _${usedPrefix}on welcome_
 ┣ ඬ⃟💫 _${usedPrefix}off welcome_
 ┣ ඬ⃟💫 _${usedPrefix}mediafire *[url]*_
@@ -43,6 +44,7 @@ let menu = `
 ┣ ඬ⃟💫 _${usedPrefix}ttp3 *[texto]*_
 ┣ ඬ⃟💫 _${usedPrefix}ttp4 *[texto]*_
 ┣ ඬ⃟💫 _${usedPrefix}ttp5 *[texto]*_
+┣ ඬ⃟💫 _${usedPrefix}wikipedia *[texto]*_
 ┣ ඬ⃟💫 _${usedPrefix}google *[texto]*_
 ┣ ඬ⃟💫 _${usedPrefix}imagen *[texto]*_
 ┣ ඬ⃟💫 _${usedPrefix}play *[texto]*_
