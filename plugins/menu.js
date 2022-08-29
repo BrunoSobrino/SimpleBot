@@ -79,6 +79,8 @@ let menu = `
 ┃ *< OWNER >*
 ┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡
 ┣ ඬ⃟💫 _${usedPrefix}update_
+┣ ඬ⃟💫 _${usedPrefix}banchat_
+┣ ඬ⃟💫 _${usedPrefix}unbanchat_
 ┗━━━━━━━━━━━━━┛
 `.trim()
 //let mentionedJid = [who]
