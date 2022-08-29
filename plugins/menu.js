@@ -93,7 +93,7 @@ thumbnail: fs.readFileSync('./src/logo.png'),
 sourceUrl: `https://chat.whatsapp.com/F0fU7LSlBBcBm6ny5fVSuT`
 }}}
 conn.sendMessage(m.chat, buttonMessage, { quoted: m })
-}}
+}
 handler.help = ['menu', 'help', '?']
 handler.tags = ['general']
 handler.command = /^(menucompleto|comandos|allmenu|info|speed|estado|menú|menu|help|\?)$/i
