@@ -1,4 +1,4 @@
-const { proto, generateWAMessage,  areJidsSameUser } = require('@adiwajshing/baileys')
+/*const { proto, generateWAMessage,  areJidsSameUser } = require('@adiwajshing/baileys')
 module.exports = {
 async all(m, chatUpdate) {
 if (m.isBaileys) return
@@ -61,4 +61,4 @@ messages: [proto.WebMessageInfo.fromObject(messages)],
 type: 'append'
 }
 this.ev.emit('messages.upsert', msg)
-}}
+}}*/
