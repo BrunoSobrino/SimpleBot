@@ -15,7 +15,7 @@ conn.sendMessage(m.chat, { audio: { url: apiytdl.descarga }, contextInfo:{"exter
 m.reply(`*[❗] 𝙴𝚁𝚁𝙾𝚁 𝙽𝙾 𝙵𝚄𝙴 𝙿𝙾𝚂𝙸𝙱𝙻𝙴 𝙳𝙴𝚂𝙲𝙰𝚁𝙶𝙰𝚁 𝙴𝙻 𝙰𝚄𝙳𝙸𝙾*`)
 }}
 handler.command = /^(getaud|ytmp3.2|yta.2)$/i
-export default handler
+module.exports = handler
 
 /*let { youtubedl, youtubedlv2, youtubedlv3 } = require('@bochilteam/scraper')
 let fetch = require('node-fetch')
