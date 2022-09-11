@@ -20,7 +20,7 @@ let menu = `
 ┣ ඬ⃟💫 _${usedPrefix}infohost_
 ┣ ඬ⃟💫 _${usedPrefix}on welcome_
 ┣ ඬ⃟💫 _${usedPrefix}off welcome_
-┣ ඬ⃟💫 _${usedPrefix}igdl *[url]*_
+┣ ඬ⃟💫 _${usedPrefix}ig *[url]*_
 ┣ ඬ⃟💫 _${usedPrefix}mediafire *[url]*_
 ┣ ඬ⃟💫 _${usedPrefix}tiktok *[url]*_
 ┣ ඬ⃟💫 _${usedPrefix}sticker *[url]*_
