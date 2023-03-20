@@ -11,12 +11,12 @@
 - CLONAR EL REPOSITORIO [Aqui](https://github.com/BrunoSobrino/SimpleBot/fork)
 - CAMBIAR NÚMERO DEL OWNER [Aqui](https://github.com/BrunoSobrino/SimpleBot/blob/master/config.js)
 
-#### `💥 ACTIVAR EN ACIDICNODES 💥`
+### `💥 ACTIVAR EN ACIDICNODES 💥`
 <a href="https://billing.acidicnodes.com"><img src="https://billing.acidicnodes.ml/storage/icon.png" width="200" height="200" alt="AcidicNodes"/></a>
 - TUTORIAL: [https://youtu.be/nbjvreJ0tUk](https://youtu.be/nbjvreJ0tUk)
 - PAGINA: [https://billing.acidicnodes.com](https://billing.acidicnodes.com)
 - SOPORTE: [https://whatsapp.acidicnodes.com](https://whatsapp.acidicnodes.com)
-- AcidicNodes hots no disponible 
+###### hots no disponible 
 
 ### `—◉ ✨ ACTIVAR EN HEROKU ✨`
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/BrunoSobrino/SimpleBot)
