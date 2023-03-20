@@ -7,7 +7,7 @@
 #### `💰 DONAR 💰`
 - AGRADECE CON UNA DONACION VOLUNTARIA [Aqui](https://www.paypal.me/TheShadowBrokers133)
 
-### `—◉ ⚙️ AJUSTES ⚙️`
+#### `⚙️ AJUSTES ⚙️`
 - CLONAR EL REPOSITORIO [Aqui](https://github.com/BrunoSobrino/SimpleBot/fork)
 - CAMBIAR NÚMERO DEL OWNER [Aqui](https://github.com/BrunoSobrino/SimpleBot/blob/master/config.js)
 
