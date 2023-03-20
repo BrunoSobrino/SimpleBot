@@ -1,6 +1,6 @@
 ## `💫 𝑆𝐼𝑀𝑃𝐿𝐸 - 𝐵𝑂𝑇 💫`
 
-#### 👑 DUDAS SOBRE EL BOT?, CONTACTANOS 👑
+### `👑 DUDAS SOBRE EL BOT?, CONTACTANOS 👑`
 <a href="http://wa.me/5219992095479" target="blank"><img src="https://img.shields.io/badge/BRUNO_SOBRINO-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" /></a>
 <a href="http://wa.me/521524531106422" target="blank"><img src="https://img.shields.io/badge/@Azami19-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" /></a>
 > No bots
@@ -50,7 +50,7 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 > npm start
 ```
 
-### `—◉ 👽 OBTENER OTRO CODIGO QR 👽`
+### `🔥 OBTENER OTRO CODIGO QR🔥`
 ```bash
 ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 > cd 
@@ -59,7 +59,7 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 > npm start
 ```
 
-#### Colaborador
+### `Colaborador`
 <a href="https://github.com/Azami19"><img src="https://github.com/Azami19.png" width="150" height="150" alt="Azami19"/></a>
 
 ## `EDITOR Y PORPIETARIO DEL BOT` 
