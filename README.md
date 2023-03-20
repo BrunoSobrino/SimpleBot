@@ -65,7 +65,7 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 ```
 
 #### Colaborador
-<a href="https://github.com/Azami19"><img src="https://github.com/Azami19.png" width="300" height="300" alt="Azami19"/></a>
+<a href="https://github.com/Azami19"><img src="https://github.com/Azami19.png" width="150" height="300" alt="Azami19"/></a>
 
 ## `EDITOR Y PORPIETARIO DEL BOT` 
 <a href="https://github.com/BrunoSobrino"><img src="https://github.com/BrunoSobrino.png" width="300" height="300" alt="BrunoSobrino"/></a>
