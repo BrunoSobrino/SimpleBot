@@ -21,7 +21,7 @@ AÑADE AL APARTADO DE BUILPACK LO SIGUIENTE, SI YA APARCEN SOLO IGNORA ESTA PART
 > https://github.com/bogini/heroku-buildpack-graphicsmagick
 ```
 
-### `🧮 ACTIVAR EN TERMUX 🧮`
+### `🛡️ ACTIVAR EN TERMUX 🛡️`
 ```bash
 ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 > cd
