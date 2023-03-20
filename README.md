@@ -16,7 +16,7 @@
 - TUTORIAL: [https://youtu.be/nbjvreJ0tUk](https://youtu.be/nbjvreJ0tUk)
 - PAGINA: [https://billing.acidicnodes.com](https://billing.acidicnodes.com)
 - SOPORTE: [https://whatsapp.acidicnodes.com](https://whatsapp.acidicnodes.com)
-|AcidicNodes hots no disponible 
+- AcidicNodes hots no disponible 
 
 ### `—◉ ✨ ACTIVAR EN HEROKU ✨`
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/BrunoSobrino/SimpleBot)
