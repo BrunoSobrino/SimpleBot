@@ -10,12 +10,9 @@ m.reply(`
 
 *[_Pagina principal_]*
 
-- acidicnodes.com
+- boxmineworld.com
 
-*[_Grupo Oficial_]*
-
-- https://chat.whatsapp.com/F0fU7LSlBBcBm6ny5fVSuT
-`)
+*[_Grupo Oficial_]*`)
 }
 handler.command = /^(infohost)$/i
 module.exports = handler
