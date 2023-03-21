@@ -43,6 +43,7 @@
         "@adiwajshing/baileys": "^4.4.0",
         "@adiwajshing/keyed-db": "^0.2.4",
         "@bochilteam/scraper": "^2.0.0",
+        "api-dylux": "^1.2.2",
         "awesome-phonenumber": "^2.58.0",
         "axios": "^0.24.0",
         "brainly-scraper-v2": "^2.0.9",
