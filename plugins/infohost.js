@@ -15,7 +15,7 @@ m.reply(`*Hola! Buscas la mejor alternativa a Heroku, termux, replit, etc. de ma
 
 *[_BoxMine Panel_]*
 
-- panel.boxmineworld.com`trim())
+- panel.boxmineworld.com`)
 }
 handler.command = /^(infohost)$/i
 module.exports = handler
