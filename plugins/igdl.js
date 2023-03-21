@@ -8,7 +8,8 @@ try {
 let human = await fetch(`https://api.lolhuman.xyz/api/instagram?apikey=${lolkeysapi}&url=${args[0]}`)
 let json = await human.json()
 let videoig = json.result
-if (!videoig || videoig == '') videoig = `${SEXO}` // No esta definido SEXO para que de error y use otro servidor
+let type1 = Object.keys(videoig)
+if (!videoig || videoig == '' || videoig == null || !/video/.test(type1)) videoig = `${SEXO}` // No esta definido SEXO para que de error y use otro servidor
 let shortUrl1 = await (await fetch(`https://tinyurl.com/api-create.php?url=${args[0]}`)).text()
 let txt1 = `🔗 *Url:* ${shortUrl1}`.trim()
 await conn.sendFile(m.chat, videoig, 'error.mp4', txt1, m)
