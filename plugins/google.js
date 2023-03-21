@@ -1,7 +1,7 @@
 const { googleIt } = require('@bochilteam/scraper')
-//const fetch = require('node-fetch')
+const fetch = require('node-fetch')
 let handler = async (m, { conn, command, args }) => {
-const fetch = (await import('node-fetch')).default
+//const fetch = (await import('node-fetch')).default
 let text = args.join` `
 if (!text) return conn.reply(m.chat, '*[❗𝐈𝐍𝐅𝐎❗] 𝙸𝙽𝙶𝚁𝙴𝚂𝙴 𝙴𝙻 𝚃𝙴𝚇𝚃𝙾 𝙾 𝚃𝙴𝙼𝙰 𝚀𝚄𝙴 𝙳𝙴𝚂𝙴𝙴 𝙱𝚄𝚂𝙲𝙰𝚁*', m)
 let url = 'https://google.com/search?q=' + encodeURIComponent(text)
