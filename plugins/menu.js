@@ -26,7 +26,6 @@ let menu = `
 ┣ ඬ⃟💫 _${usedPrefix}sticker *[url]*_
 ┣ ඬ⃟💫 _${usedPrefix}attp *[texto]*_
 ┣ ඬ⃟💫 _${usedPrefix}attp2 *[texto]*_
-┣ ඬ⃟💫 _${usedPrefix}attp3 *[texto]*_
 ┣ ඬ⃟💫 _${usedPrefix}ttp *[texto]*_
 ┣ ඬ⃟💫 _${usedPrefix}ttp2 *[texto]*_
 ┣ ඬ⃟💫 _${usedPrefix}ttp3 *[texto]*_
@@ -88,7 +87,7 @@ externalAdReply: {
 showAdAttribution: true,
 mediaType: 'VIDEO',
 mediaUrl: null,
-title: '👑 ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴡᴏʀʟᴅ ﹣ ᴇs 👑',
+title: '👑 𝐆𝐫𝐮𝐩𝐨_𝐃𝐞_𝐒𝐨𝐩𝐨𝐫𝐭𝐞 👑',
 body: null,
 thumbnail: fs.readFileSync('./src/logo.png'),
 sourceUrl: `https://chat.whatsapp.com/FRkr7jJHSJA5OjVtE64dDs`
