@@ -14,21 +14,12 @@
 ### `🛡️ ACTIVAR EN TERMUX 🛡️`
 ```bash
 ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
-> cd
 > termux-setup-storage
-> apt update 
-> apt upgrade 
-> apt install yarn 
-> apt install git -y
-> apt install nodejs -y
-> apt install ffmpeg -y
-> apt install imagemagick -y
+> apt update && apt upgrade && apt install yarn && apt install git -y && apt install nodejs -y && apt install ffmpeg -y && apt install imagemagick -y
 > git clone https://github.com/BrunoSobrino/SimpleBot
 > cd SimpleBot
+> npm install
 > yarn install
-> npm install
-> npm update
-> npm install
 > npm start
 ```
 
@@ -57,7 +48,7 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 - Tutorial: [https://youtu.be/eC9TfKICpcY](https://youtu.be/eC9TfKICpcY)
 - Dudas UNICAMENTE SOBRE EL HOST: [https://discord.gg/84qsr4v](https://discord.gg/84qsr4v) (Preguntar por Vicemi)
 
-### `Colaborador`
+### `COLABORADORES DEL BOT`
 <a href="https://github.com/Azami19"><img src="https://github.com/Azami19.png" width="150" height="150" alt="Azami19"/></a>
 
 ## `EDITOR Y PORPIETARIO DEL BOT` 
