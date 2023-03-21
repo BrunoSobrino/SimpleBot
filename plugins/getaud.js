@@ -20,5 +20,5 @@ await conn.sendMessage(m.chat, { audio: { url: lolh.result.link }, fileName: `${
 } catch {
 m.reply(`*[❗] 𝙴𝚁𝚁𝙾𝚁 𝙽𝙾 𝙵𝚄𝙴 𝙿𝙾𝚂𝙸𝙱𝙻𝙴 𝙳𝙴𝚂𝙲𝙰𝚁𝙶𝙰𝚁 𝙴𝙻 𝙰𝚄𝙳𝙸𝙾*`)
 }}}
-handler.command = /^(getaud|ytmp3.2|yta.2)$/i
+handler.command = /^(getaud|ytmp3.2|yta.2|ytmp3|yta)$/i
 module.exports = handler
