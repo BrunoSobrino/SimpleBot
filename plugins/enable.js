@@ -21,7 +21,7 @@ break
 default:
 if (!/[01]/.test(command)) throw `
 ┌〔 OPCIONES 〕
-├ welcome
+├ welcome 
 └────
 Ejemplo:
 ${usedPrefix}on welcome
