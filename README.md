@@ -3,7 +3,18 @@
 ### `👑 DUDAS SOBRE EL BOT?, CONTACTANOS 👑`
 <a href="http://wa.me/5219992095479" target="blank"><img src="https://img.shields.io/badge/BRUNO_SOBRINO-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" /></a>
 <a href="http://wa.me/521524531106422" target="blank"><img src="https://img.shields.io/badge/@Azami19-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" /></a>
-> No bots
+
+### `—◉ 🔗 CUENTAS OFICIALES 🔗`
+
+* https://www.atom.bio/theshadowbrokers-team
+
+### `—◉ 💟 GRUPO DE SOPORTE 💟`
+
+<a href="https://chat.whatsapp.com/FRkr7jJHSJA5OjVtE64dDs" target="blank"><img src="https://img.shields.io/badge/GRUPO_DE_SOPORTE_(𝙴𝚂)-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" /></a>
+<a href="https://chat.whatsapp.com/FRkr7jJHSJA5OjVtE64dDs" target="blank"><img src="https://img.shields.io/badge/SUPPORT_GROUP_(EN)-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" /></a>
+
+> LOS NUMEROS NO SON BOTS Y EN EL GRUPO NO SE PERMITEN NUMEROS QUE SEAN BOTS
+
 ### `💰 DONAR 💰`
 - AGRADECE CON UNA DONACION VOLUNTARIA [Aqui](https://www.paypal.me/TheShadowBrokers133)
 
