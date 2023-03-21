@@ -9,7 +9,7 @@ let url = 'https://google.com/search?q=' + encodeURIComponent(text)
 let search = await googleIt(text)
 let msg = search.articles.map(({ title, url, description }) => { return `*${title}*\n_${url}_\n_${description}_` }).join('\n\n')
 try {
-let ss = await ssweb(url, 'desktop')
+let ss = await ssweb(url, 'tablet')
 //let ss = await (await fetch(`https://api.lolhuman.xyz/api/ssweb?apikey=${lolkeysapi}&url=${url}`)).arrayBuffer()
 await conn.sendFile(m.chat, ss.result, 'error.png', url + '\n\n' + msg, m)
 } catch {
