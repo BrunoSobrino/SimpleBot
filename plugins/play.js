@@ -29,7 +29,7 @@ externalAdReply: {
 showAdAttribution: true,
 mediaType: 'VIDEO',
 mediaUrl: null,
-title: '👑 ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴡᴏʀʟᴅ ﹣ ᴇs 👑',
+title: '👑 𝐆𝐫𝐮𝐩𝐨_𝐃𝐞_𝐒𝐨𝐩𝐨𝐫𝐭𝐞 👑',
 body: null,
 thumbnail: fs.readFileSync('./src/logo.png'),
 sourceUrl: `https://chat.whatsapp.com/FRkr7jJHSJA5OjVtE64dDs`
