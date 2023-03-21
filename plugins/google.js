@@ -12,7 +12,7 @@ try {
 let ss = await (await fetch(`https://api.lolhuman.xyz/api/ssweb?apikey=${lolkeysapi}&url=${url}`)).arrayBuffer()
 let ss2 = ss
 let ss3 = await ssweb(url, 'desktop')
-if (!ss2 || ss2 == '' || ss2 == null || ss2 === '') ss2 = ss3.result
+if (!ss || ss == '' || ss == null || ss === '') ss2 = ss3.result
 await conn.sendFile(m.chat, ss2, 'error.png', url + '\n\n' + msg, m)
 } catch {
 m.reply(msg)
