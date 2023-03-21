@@ -24,5 +24,5 @@ await conn.sendMessage(m.chat, { video: { url: n2 }, fileName: `${n}.mp4`, mimet
 } catch {
 m.reply(`*[❗] 𝙴𝚁𝚁𝙾𝚁 𝙽𝙾 𝙵𝚄𝙴 𝙿𝙾𝚂𝙸𝙱𝙻𝙴 𝙳𝙴𝚂𝙲𝙰𝚁𝙶𝙰𝚁 𝙴𝙻 𝚅𝙸𝙳𝙴𝙾*`)
 }}}
-handler.command = /^(getvid|ytmp4.2|ytv.2)$/i
+handler.command = /^(getvid|ytmp4.2|ytv.2|ytv|ytmp4)$/i
 module.exports = handler
