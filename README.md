@@ -50,6 +50,7 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 
 ### `COLABORADORES DEL BOT`
 <a href="https://github.com/Azami19"><img src="https://github.com/Azami19.png" width="150" height="150" alt="Azami19"/></a>
+[![elrebelde21](https://github.com/elrebelde21.png?size=100)](https://github.com/elrebelde21)
 
 ## `EDITOR Y PORPIETARIO DEL BOT` 
 <a href="https://github.com/BrunoSobrino"><img src="https://github.com/BrunoSobrino.png" width="300" height="300" alt="BrunoSobrino"/></a>
