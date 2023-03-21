@@ -14,11 +14,13 @@ const ttl = await yt.title
 await conn.sendMessage(m.chat, { video: { url: dl_url }, mimetype: 'video/mp4', fileName: `${ttl}.mp4`, thumbnail: await fetch(yt.thumbnail) }, { quoted: m })   
 } catch {
 try {    
-let ytm3 = encodeURIComponent(text)
-await m.reply(global.wait)  
-let res = await fetch(`https://latam-api.vercel.app/api/ytmp4_2?apikey=nekosmic&q=${ytm3}`)
-let json = await res.json()
-await conn.sendMessage(m.chat, { video: { url: json.descarga }, mimetype: 'video/mp4', fileName: `${json.titulo}.mp4`, thumbnail: await fetch(json.logo)  }, { quoted: m })
+let lolhuman = await fetch(`https://api.lolhuman.xyz/api/ytvideo2?apikey=${lolkeysapi}&url=${args[0]}`)    
+let lolh = await lolhuman.json()
+let n = lolh.result.title || 'error'
+let n2 = lolh.result.link
+let n3 = lolh.result.size
+let n4 = lolh.result.thumbnail
+await conn.sendMessage(m.chat, { video: { url: n2 }, fileName: `${n}.mp4`, mimetype: 'video/mp4', caption: `▢ 𝚃𝙸𝚃𝚄𝙻𝙾: ${n}\n▢ 𝙿𝙴𝚂𝙾 𝙳𝙴𝙻 𝚅𝙸𝙳𝙴𝙾: ${n3}`, thumbnail: await fetch(n4) }, { quoted: m })
 } catch {
 m.reply(`*[❗] 𝙴𝚁𝚁𝙾𝚁 𝙽𝙾 𝙵𝚄𝙴 𝙿𝙾𝚂𝙸𝙱𝙻𝙴 𝙳𝙴𝚂𝙲𝙰𝚁𝙶𝙰𝚁 𝙴𝙻 𝚅𝙸𝙳𝙴𝙾*`)
 }}}
