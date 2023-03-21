@@ -29,7 +29,7 @@ global.APIKeys = {
 'https://api.xteam.xyz': 'd90a9e986e18778b',
 'https://zahirr-web.herokuapp.com': 'zahirgans' 
 }
-global.lolkeysapi = ['85faf717d0545d14074659ad']
+global.lolkeysapi = ['BrunoSobrino']
 global.keysZens = ['fiktod', 'c2459db922', 'BF39D349845E', '675e34de8a', '37CC845916', '0b917b905e6f', '6fb0eff124']
 global.keysxxx = keysZens[Math.floor(keysZens.length * Math.random())]
 global.multiplier = 9999 
