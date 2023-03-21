@@ -39,7 +39,30 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 > rm -rf session.data.json
 > npm start
 ```
-
+----
+### 🚀 USAR EL SIMPLEBOT 24/7 EN TERMUX 
+> EJECUTE ESTE COMANDO CUANDO YA TENGA INSTALADO EL BOT
+```bash
+termux-wake-lock && npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs 
+``` 
+#### ⬇️ Opciones Disponibles
+> **Warning** Esto eliminará todo el historial que hayas establecido con PM2:
+```bash 
+pm2 delete index
+``` 
+> Si tienes cerrado Termux y quiere ver de nuevo la ejecución use:
+```bash 
+pm2 logs 
+``` 
+> Si desea detener la ejecución de Termux use:
+```bash 
+pm2 stop index
+``` 
+> Si desea iniciar de nuevo la ejecución de Termux use:
+```bash 
+pm2 start index
+``` 
+----
 ### `💥 ACTIVAR EN BOXMINEHOST 💥`
 <a href="https://boxmineworld.com"><img src="https://raw.githubusercontent.com/BrunoSobrino/TheMystic-Bot-MD/master/src/Pre%20Bot%20Publi.png" width="450" height="240" alt="JPG"/></a>
 - Pagina Oficial: [https://boxmineworld.com](https://boxmineworld.com)
