@@ -10,9 +10,10 @@ let search = await googleIt(text)
 let msg = search.articles.map(({ title, url, description }) => { return `*${title}*\n_${url}_\n_${description}_` }).join('\n\n')
 try {
 let ss = await (await fetch(`https://api.lolhuman.xyz/api/ssweb?apikey=${lolkeysapi}&url=${url}`)).arrayBuffer()
-let ss2 = await ssweb(url, 'desktop')
-if (!ss || ss == '' || ss == null || ss === '') ss = ss2.result
-await conn.sendFile(m.chat, ss.result, 'error.png', url + '\n\n' + msg, m)
+let ss2 = ss
+let ss3 = await ssweb(url, 'desktop')
+if (!ss2 || ss2 == '' || ss2 == null || ss2 === '') ss2 = ss3.result
+await conn.sendFile(m.chat, ss2, 'error.png', url + '\n\n' + msg, m)
 } catch {
 m.reply(msg)
 }}
