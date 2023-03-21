@@ -8,22 +8,22 @@ try {
 let human = await fetch(`https://api.lolhuman.xyz/api/instagram?apikey=${lolkeysapi}&url=${args[0]}`)
 let json = await human.json()
 let videoig = json.result
-let type1 = Object.keys(videoig)
-if (!videoig || videoig == '' || videoig == null || !/video/.test(type1)) videoig = `${SEXO}` // No esta definido SEXO para que de error y use otro servidor
+if (!videoig || videoig == '' || videoig == null) videoig = `${SEXO}` // No esta definido SEXO para que de error y use otro servidor
 let shortUrl1 = await (await fetch(`https://tinyurl.com/api-create.php?url=${args[0]}`)).text()
 let txt1 = `🔗 *Url:* ${shortUrl1}`.trim()
 await conn.sendFile(m.chat, videoig, 'error.mp4', txt1, m)
-} catch (eE2) {
-console.log(eE2)  
+} catch { 
 try {  
 const resultss = (await instagramGetUrl(args[0])).url_list[0]
 let shortUrl2 = await (await fetch(`https://tinyurl.com/api-create.php?url=${args[0]}`)).text()
+if (!resultss || resultss == '' || resultss == null) resultss = `${SEXO}` // No esta definido SEXO para que de error y use otro servidor
 let txt2 = `🔗 *Url:* ${shortUrl2}`.trim()
 conn.sendFile(m.chat, resultss, 'error.mp4', txt2, m)
 } catch {
 try {  
 const resultssss = await instagramdl(args[0]).catch(async _ => await instagramdlv2(args[0])).catch(async _ => await instagramdlv3(args[0])).catch(async _ => await instagramdlv4(args[0]))
 let shortUrl3 = await (await fetch(`https://tinyurl.com/api-create.php?url=${args[0]}`)).text()
+if (!resultssss || resultssss == '' || resultssss == null) resultssss = `${SEXO}` // No esta definido SEXO para que de error y arroje msg de error
 let txt3 = `🔗 *Url:* ${shortUrl3}`.trim()
 for (const { url } of resultssss) await conn.sendFile(m.chat, url, 'error.mp4', txt3, m)
 } catch {
