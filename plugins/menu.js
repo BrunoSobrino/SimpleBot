@@ -1,6 +1,10 @@
 let fs = require('fs')
 let handler = async (m, { conn, usedPrefix }) => {
 let pp = './Menu2.jpg'
+let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
+let mentionedJid = [who]
+let username = conn.getName(who)
+let user = global.db.data.users[m.sender]
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 let menu = `
 ╭══〘 ✯✯✯✯✯✯✯✯ 〙═╮
@@ -64,31 +68,8 @@ let menu = `
 ┣ ඬ⃟💫 _${usedPrefix}update_
 ┣ ඬ⃟💫 _${usedPrefix}banchat_
 ┣ ඬ⃟💫 _${usedPrefix}unbanchat_
-┗━━━━━━━━━━━━━┛
-`.trim()
-let buttons = [
-{ buttonId: '#owner', buttonText: { displayText: '💫 𝐎𝐖𝐍𝐄𝐑 💫' }, type: 1 },
-{ buttonId: '#runtime', buttonText: { displayText: '⏰ 𝐑𝐔𝐍𝐓𝐈𝐌𝐄 ⏰' }, type: 1 },
-{ buttonId: '#infohost', buttonText: { displayText: '👑 𝐈𝐍𝐅𝐎𝐇𝐎𝐒𝐓 👑' }, type: 1 }]
-let buttonMessage = {
-image: fs.readFileSync('./Menu2.jpg'),
-caption: menu.trim(),
-mentions: [m.sender],
-footer: `*${wm}*`,
-buttons: buttons,
-headerType: 4,
-contextInfo: {
-mentionedJid: [m.sender],
-externalAdReply: {
-showAdAttribution: true,
-mediaType: 'VIDEO',
-mediaUrl: null,
-title: '👑 𝐆𝐫𝐮𝐩𝐨_𝐃𝐞_𝐒𝐨𝐩𝐨𝐫𝐭𝐞 👑',
-body: null,
-thumbnail: fs.readFileSync('./src/logo.png'),
-sourceUrl: `https://chat.whatsapp.com/FRkr7jJHSJA5OjVtE64dDs`
-}}}
-conn.sendMessage(m.chat, buttonMessage, { quoted: m })
+┗━━━━━━━━━━━━━┛`.trim()
+conn.sendFile(m.chat, pp, 'lp.jpg', menu, m, false, { contextInfo: { mentionedJid }})
 }
 handler.help = ['menu', 'help', '?']
 handler.tags = ['general']
