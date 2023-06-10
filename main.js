@@ -63,7 +63,7 @@ const connectionOptions = {
   auth: state,
   logger: P({ level: 'silent'}),
   downloadHistory: false,
-  browser: ['SIMPLE-BOT','Safari','1.0.0']
+  browser: ['SIMPLE-BOT','Edge','1.0.0']
 }
 
 global.conn = simple.makeWASocket(connectionOptions)
