@@ -40,10 +40,10 @@
     },
     "license": "GPL-3.0-or-later",
     "dependencies": {
-        "@adiwajshing/baileys": "github:WhiskeySockets/Baileys",
+        "@adiwajshing/baileys": "npm:@queenanya/baileys2@6.4.1",
         "@adiwajshing/keyed-db": "^0.2.4",
-        "@bochilteam/scraper": "^2.0.0",
-        "api-dylux": "^1.2.2",
+        "@bochilteam/scraper": "^4.2.4",
+        "api-dylux": "^1.5.6",
         "awesome-phonenumber": "^2.58.0",
         "axios": "^0.24.0",
         "brainly-scraper-v2": "^2.0.9",
